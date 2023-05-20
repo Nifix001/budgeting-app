@@ -4,12 +4,14 @@ import {
 } from "react-router-dom";
 
 // routes
-import Dashboard from "./pages/Dashboard";
-
+import Dashboard, { dashboardLoader } from "./pages/Dashboard";
+import Error from "./pages/error";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Dashboard />
+    element: <Dashboard />,
+    loader: dashboardLoader,
+    errorElement: <Error />
   },
 ]);
 
