@@ -1,5 +1,5 @@
 // rrd imports
-import { useLoaderData } from "react-router-dom"
+import { Outlet, useLoaderData } from "react-router-dom"
 
 //  helper functions
 import { fetchData } from "../helpers"
@@ -15,7 +15,7 @@ const Main = () => {
 
   return (
     <div>
-      Main
+      <Outlet />
     </div>
   )
 }
