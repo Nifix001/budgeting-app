@@ -7,6 +7,7 @@ import Main from "./layouts/Main";
 // routes
 import Dashboard, { dashboardLoader } from "./pages/Dashboard";
 import Error from "./pages/error";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        path: "/",
+        index: true,
         element: <Dashboard />,
         loader: dashboardLoader,
         errorElement: <Error />
