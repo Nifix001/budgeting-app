@@ -1,5 +1,6 @@
 // rrd imports
 import { useLoaderData } from "react-router-dom"
+import Intro from "../components/Intro";
 
 //  helper functions
 import { fetchData } from "../helpers"
@@ -15,7 +16,7 @@ const Dashboard = () => {
 
   return (
     <div>
-    {userName ?(<p>{userName}</p>) : <Intro/>}
+    {userName ?(<p>{userName}</p>) : <Intro />}
     </div>
   )
 }
