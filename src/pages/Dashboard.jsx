@@ -1,5 +1,6 @@
 // rrd imports
-import { useLoaderData } from "react-router-dom"
+import { useLoaderData } from "react-router-dom";
+// components
 import Intro from "../components/Intro";
 
 //  helper functions
