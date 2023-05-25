@@ -1,7 +1,10 @@
 import { Form } from "react-router-dom"
 
 // library
-import { UseerPlusIcon } from "@heroicons/react/24/solid"
+import { UserPlusIcon } from "@heroicons/react/24/solid";
+
+// assets
+import illustration from "../assets/illustration.jpg"
 
 const Intro = () => {
   return (
@@ -11,7 +14,7 @@ const Intro = () => {
             Take Control of <span className="accent">Your Money</span>
         </h1>
         <p>
-            Personal budgeting is the secret to financial freedom. Start your journ today.
+            Personal budgeting is the secret to financial freedom. Start your journey today.
         </p>
         <Form method="post">
             <input type="text" 
@@ -23,10 +26,11 @@ const Intro = () => {
             />
             <button type="submit" className="btn btn--dark">
                 <span>Create Account</span>
-                <UseerPlusIcon width={20} />
+                <UserPlusIcon width={20} />
             </button>
         </Form>
       </div>
+      <img src={illustration} alt="Person with money" width={600} />
     </div>
   )
 }
