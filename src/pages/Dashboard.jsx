@@ -1,8 +1,10 @@
 // rrd imports
 import { useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
+
 // components
 import Intro from "../components/Intro";
+import AddBudgetForm from "../components/AddBudgetForm";
 
 //  helper functions
 import { fetchData } from "../helpers"
@@ -37,7 +39,9 @@ const Dashboard = () => {
         <div className="grid-sm">
           {}
           <div className="grid-lg">
-            
+            <div className="flex-lg">
+              <AddBudgetForm />
+            </div>
           </div>
         </div>
       </div>
