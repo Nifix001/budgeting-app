@@ -9,8 +9,9 @@ import { fetchData } from "../helpers"
 
 // loader
 export function dashboardLoader(){
-    const userName = fetchData("userName");
-    return { userName }
+  const userName = fetchData("userName");
+  const budgets = fetchData("budgets");  
+  return { userName,budgets }
 }
 
 // action
@@ -26,11 +27,21 @@ export async function dashboardAction({request}){
 }
 
 const Dashboard = () => {
-  const { userName } = useLoaderData()
+  const { userName, budgets } = useLoaderData()
 
   return (
     <div>
-    {userName ?(<p>{userName}</p>) : <Intro />}
+    {userName ?(
+      <div className="dashboard">
+        <h1>Welcome back, <span className="accent">{userName}</span></h1>
+        <div className="grid-sm">
+          {}
+          <div className="grid-lg">
+            
+          </div>
+        </div>
+      </div>
+    ) : <Intro />}
     </div>
   )
 }
