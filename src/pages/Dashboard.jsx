@@ -63,7 +63,7 @@ const Dashboard = () => {
             <div className="grid-lg">
               <div className="flex-lg">
               <AddBudgetForm />
-              <AddExpenseForm /> 
+              <AddExpenseForm budgets={budgets} /> 
               </div>
             </div>
             )
