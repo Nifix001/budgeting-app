@@ -1,7 +1,10 @@
+import { useRef } from "react";
 import { useFetcher } from "react-router-dom"
 
 const AddExpenseForm = ({ budgets }) => {
   const fetcher = useFetcher();
+
+  const formRef = useRef();
 
   return (
     <div className="form-wrapper">
