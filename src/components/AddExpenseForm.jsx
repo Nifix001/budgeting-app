@@ -5,6 +5,8 @@ const AddExpenseForm = ({ budgets }) => {
   const fetcher = useFetcher();
 
   const formRef = useRef();
+  
+  const focusRef = useRef();
 
   return (
     <div className="form-wrapper">
@@ -18,7 +20,18 @@ const AddExpenseForm = ({ budgets }) => {
         className="grid-sm"
         ref={formRef}
         >
-
+          <div className="expense-inputs">
+            <div className="grid-xs">
+              <label htmlFor="newExpense">Expense Name</label>
+              <input 
+              type="text"
+              name="newExpense" 
+              id="newExpense"
+               placeholder="e.g., Coffee"
+               ref={focusRef}
+              />
+            </div>
+          </div>
         </fetcher.Form>
     </div>
   )
