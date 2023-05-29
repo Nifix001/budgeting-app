@@ -9,6 +9,7 @@ import AddExpenseForm from "../components/AddExpenseForm";
 
 //  helper functions
 import { createBudget, createExpense, fetchData, waait } from "../helpers"
+import BudgetItem from "../components/BudgetItem";
 
 
 // loader
@@ -78,6 +79,14 @@ const Dashboard = () => {
               <div className="flex-lg">
               <AddBudgetForm />
               <AddExpenseForm budgets={budgets} /> 
+              </div>
+              <h2>Existing Budgets</h2>
+              <div className="budgets">
+                {
+                  budgets.map((budget) => (
+                    <BudgetItem key={budget.id} budget={budget} />
+                  ))
+                }
               </div>
             </div>
             )
