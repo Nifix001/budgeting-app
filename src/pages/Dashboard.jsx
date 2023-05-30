@@ -17,7 +17,7 @@ export function dashboardLoader(){
   const userName = fetchData("userName");
   const budgets = fetchData("budgets");  
   const expenses = fetchData("expenses");  
-  return { userName, budgets, exxpenses }
+  return { userName, budgets, expenses }
 }
 
 // action
@@ -89,6 +89,15 @@ const Dashboard = () => {
                   ))
                 }
               </div>
+              {
+                expenses && expenses.lenght >0 && (
+                  <div className="grid-md">
+                    <h2>Recent Expenses</h2>
+                    <Table expenses={expenses.
+                    sort((a, b) =>b.createdAt - a.createdAt)}/>
+                  </div>
+                ) 
+              }
             </div>
             )
             : (
