@@ -16,7 +16,8 @@ import BudgetItem from "../components/BudgetItem";
 export function dashboardLoader(){
   const userName = fetchData("userName");
   const budgets = fetchData("budgets");  
-  return { userName,budgets }
+  const expenses = fetchData("expenses");  
+  return { userName, budgets, exxpenses }
 }
 
 // action
@@ -65,7 +66,7 @@ export async function dashboardAction({request}){
   }
 
 const Dashboard = () => {
-  const { userName, budgets } = useLoaderData()
+  const { userName, budgets, expenses } = useLoaderData()
 
   return (
     <div>
