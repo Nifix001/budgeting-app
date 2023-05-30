@@ -6,10 +6,12 @@ import { toast } from "react-toastify";
 import Intro from "../components/Intro";
 import AddBudgetForm from "../components/AddBudgetForm";
 import AddExpenseForm from "../components/AddExpenseForm";
+import BudgetItem from "../components/BudgetItem";
+import Table from "../components/Table";
+
 
 //  helper functions
 import { createBudget, createExpense, fetchData, waait } from "../helpers"
-import BudgetItem from "../components/BudgetItem";
 
 
 // loader
