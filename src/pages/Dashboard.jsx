@@ -92,7 +92,7 @@ const Dashboard = () => {
                 }
               </div>
               {
-                expenses && expenses.lenght >0 && (
+                expenses && expenses.length > 0 && (
                   <div className="grid-md">
                     <h2>Recent Expenses</h2>
                     <Table 
