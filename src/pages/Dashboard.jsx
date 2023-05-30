@@ -93,8 +93,9 @@ const Dashboard = () => {
                 expenses && expenses.lenght >0 && (
                   <div className="grid-md">
                     <h2>Recent Expenses</h2>
-                    <Table expenses={expenses.
-                    sort((a, b) =>b.createdAt - a.createdAt)}/>
+                    <Table 
+                    expenses={expenses.sort((a, b) =>b.createdAt - a.createdAt)}
+                    />
                   </div>
                 ) 
               }
@@ -102,7 +103,7 @@ const Dashboard = () => {
             )
             : (
               <div className="grid-sm">
-                <p>Personal budgeting is th secret to financial freedom.</p>
+                <p>Personal budgeting is the secret to financial freedom.</p>
                 <p>Create a budget to get started!</p>
                 <AddBudgetForm />
               </div>
