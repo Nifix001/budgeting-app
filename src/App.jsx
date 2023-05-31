@@ -40,16 +40,19 @@ const router = createBrowserRouter([
           element: <BudgetPage />,
           loader: budgetLoader,
           // action: expensesAction
+          errorElement: <Error />
         },
         {
           path: "expenses",
           element: <ExpensesPage />,
           loader: expensesLoader,
-          action: expensesAction
+          action: expensesAction,
+          errorElement: <Error />
         },
         { 
           path: "logout",
-          action: logoutAction
+          action: logoutAction,
+          errorElement: <Error />
         }
       ]
     },
