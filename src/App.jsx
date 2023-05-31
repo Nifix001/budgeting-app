@@ -14,9 +14,11 @@ import Main, { mainLoader } from "./layouts/Main";
 import Dashboard, { dashboardAction, dashboardLoader } from "./pages/Dashboard";
 import Error from "./pages/Error";
 import ExpensesPage, { expensesAction, expensesLoader} from "./pages/ExpensesPage";
+import BudgetPage from "./pages/BudgetPage";
 
 // Actions
 import { logoutAction } from "./actions/logout";
+
 
 
 const router = createBrowserRouter([
@@ -32,6 +34,12 @@ const router = createBrowserRouter([
           loader: dashboardLoader,
           action: dashboardAction,
           errorElement: <Error />
+        },
+        {
+          path: "budget/:id",
+          element: <BudgetPage />,
+          // loader: expensesLoader,
+          // action: expensesAction
         },
         {
           path: "expenses",
